@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*----公共类----*/
+.middle_self{
+    margin-left: auto;
+    margin-right: auto;
+}
+.border_test{
+    border: solid 1px red;
+}
+
+/*----填报界面----*/
+
+/*表格中的input*/
+
+.tb_input{
+    width: 100%;
+    height: 35px;
+    text-indent: 6px;
+    border:solid 1px #D2D2D2;
+}
+/*表格标题*/
+.lab_title{
+    color: #4784e3;
+    font-weight: bold;
+    font-family: "微软雅黑";
+}
+/*红色星号*/
+.must{
+    color: red;
+}
+/*表格样式*/
+.tab{
+	border: 1px #ddd solid;
+	width: 80%
+}

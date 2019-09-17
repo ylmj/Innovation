@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Final</display-name>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>CharFilter</filter-name>
+    <filter-class>com.basic.filter.CharFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>CharFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.basic.filter.LoginFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>/fill_in.jsp</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+    <filter-name>SystemContextFilter</filter-name>
+    <filter-class>com.basic.filter.SystemContextFilter</filter-class>
+    <init-param>
+      <param-name>pagesize</param-name>
+      <param-value>15</param-value>
+    </init-param>
+  </filter>
+  
+  <filter-mapping>
+    <filter-name>SystemContextFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.basic.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.basic.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PlatformSubmit</servlet-name>
+    <servlet-class>com.basic.servlet.PlatformSubmitServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PlatformSubmit</servlet-name>
+    <url-pattern>/PlatformSubmit</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

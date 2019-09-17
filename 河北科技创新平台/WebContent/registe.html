@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>河北科技创新年报系统用户注册</title>
+<link rel="stylesheet" href="layui/css/layui.css">
+<script type="text/javascript" src="byhand/js/registe.js"></script>
+<style>
+  div { border:; width:600px;height:30px; margin:0 auto; text-align:center;} 
+  span { color:red; font-size:18px;width:78px; margin:auto 10px;float:left;}
+  .textinput{  width:200px; height:25px; border:1px #ooo;float:left}
+  .msg{ float:left;  margin:auto 10px;padding-top:5px;}
+  i{color:#7f7d7d; width:210px;}
+</style>
+</head>
+<body>
+<form action="Register" method="post" name="form" onsubmit="return check()">
+<h1 style="text-align:center;margin:20px 0 20px 0;" >平台注册</h1>
+<div><label><span>用户名:</span><input type="text" class="textinput" name="username" id="username" checked="checked"></label>
+	<p class="msg"><i>推荐使用中文字符，不含特殊字符</i></p>
+</div>
+<div><label><span>平台名称:</span><input type="text" class="textinput" name="platform_name" id="platform_name" checked="checked"></label>
+	<p class="msg"><i>推荐使用中文字符，不含特殊字符</i></p>
+</div>
+<div><label><span>平台编号:</span><input type="text" class="textinput" name="platform_num" id="platform_num" checked="checked"></label>
+	<p class="msg"><i>不含特殊字符</i></p>
+</div>
+<div><label><span>批准年月:</span><input type="text" class="textinput" name="approval_date" id="approval_date" checked="checked"></label>
+	<p class="msg"><i>格式如1998-02</i></p>
+</div>
+<div><label><span>批准文号:</span><input type="text" class="textinput" name="approval_number" id="approval_number" checked="checked"></label>
+	<p class="msg"><i>数字和字母</i></p>
+</div>
+<div><label><span>技术领域:</span><input type="text" class="textinput" name="field" id="field" checked="checked"></label>
+	<p class="msg"><i>不含特殊字符</i></p>
+</div>
+<div><label><span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</span><input type="text" class="textinput" name="password" id="password" checked="checked"></label>
+	<p class="msg"><i>长度为6~16</i></p>
+</div>
+<div><label><span>确认密码:</span><input type="text" class="textinput" name="password2" id="password2" checked="checked" disabled></label>
+	<p class="msg"><i>请重新输入一遍</i></p>
+</div>
+<br>
+<div><input type="submit" name="submit" value="注册" class="layui-btn layui-btn-normal" >
+<input type="reset" value="重置" class="layui-btn layui-btn-normal"/></div>
+</form>
+</body>
+</html>
